@@ -1,4 +1,8 @@
-pasos para levantar fake-api:
-    - cd fake-api
-    - npm install (solo la primera vez o cuando se instala una nueva dependencia)
-    - node index.js (comando para iniciar api)
+**Pasos para levantar FAKE-API**
+
+ 1. Moverse al directorio fake-api
+    `cd fake-api`
+ 2.  Instalar dependencias
+	 `npm install`
+ 3.  Iniciar fake-api
+	`node index.js`
