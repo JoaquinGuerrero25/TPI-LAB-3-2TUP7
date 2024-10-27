@@ -11,16 +11,16 @@ app.use(express.json());
 app.post('/login',(req,res)=>{
     const {email,password} = req.body;
     if(!email || !password){
-        return req.status(400).send('Debe completar todos los campos')
+        return res.status(400).send('Debe completar todos los campos')
     }
 
     const user = users.find(u=>u.email === email)
-    if(!user) return res.status(404).send('Usuario no encontrado.')
+    if(!user) return res.status(404).send('Usuario no encontrado.');
     if(user.password === password){
         res.status(201).json(user);
     }
     else{
-        res.status(404).send('Constrasena incorrecta')
+        res.status(404).send('Contraseña incorrecta')
     }
         
 })
