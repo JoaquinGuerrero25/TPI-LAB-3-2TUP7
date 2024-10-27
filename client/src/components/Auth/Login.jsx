@@ -24,12 +24,12 @@ const Login = () => {
     setErrorMessage(null);
     e.preventDefault();
     try {
-      await axios.post('/login', formData);
+      const response = await axios.post('/Authentication/AuthenticateUser', formData);
       navigate("/");
     }
     catch (error) {
       setShowMessage(true);
-      setErrorMessage(error?.response?.data);
+      // setErrorMessage(error?.response?.data);
     }
   }
 
@@ -46,12 +46,12 @@ const Login = () => {
       <div className="border w-[90%] max-w-[700px] p-4 md:p-12 rounded-xl shadow-lg flex flex-col items-center justify-center gap-6 bg-white">
         <h2 className="text-3xl font-semibold">Iniciar Sesión</h2>
         <form onSubmit={handleSubmit} className="w-full flex flex-col items-center gap-4">
-          {showMessage && (
+          {/* {showMessage && (
             <div className="text-red-500 mt-2 text-sm text-center border border-red-500 p-2 rounded-md bg-red-50">
               <FontAwesomeIcon icon={faTriangleExclamation} className="pr-2" />
               {errorMessage}
             </div>
-          )}
+          )} */}
           <Input
             type="email"
             label="Email"

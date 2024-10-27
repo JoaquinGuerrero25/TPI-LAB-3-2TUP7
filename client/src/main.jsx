@@ -5,7 +5,7 @@ import axios from 'axios';
 import App from './App.jsx';
 import './index.css';
 
-axios.defaults.baseURL = 'http://localhost:5190/api';
+axios.defaults.baseURL = 'https://localhost:7238/api';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

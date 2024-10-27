@@ -1,0 +1,1 @@
+export const headerAppointment = ["Doctor","Especialidad","Fecha","Hora","Estado","Accion"]
