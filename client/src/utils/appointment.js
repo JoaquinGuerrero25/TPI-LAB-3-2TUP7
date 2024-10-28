@@ -1,1 +1,1 @@
-export const headerAppointment = ["Doctor","Especialidad","Fecha","Hora","Estado","Accion"]
+export const headerAppointment = ["Doctor","Especialidad","Fecha","Hora","Estado"]

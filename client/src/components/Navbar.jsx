@@ -47,6 +47,17 @@ export const Navbar = () => {
                                 Turnos
                             </Button>
                         </Link>
+                        <Link to={'/contacto'}>
+                            <Button
+                                className="w-full text-blue-700 relative font-medium text-lg "
+                                color="primary"
+                                variant={location.pathname === '/contacto' ? 'flat' : 'light'}
+                                radius="sm"
+                            >
+                                <FontAwesomeIcon icon={faCalendarCheck} className="absolute left-4" />
+                                Contacto
+                            </Button>
+                        </Link>
                     </div>
                     <div>
                         <Link to={'/login'}>
