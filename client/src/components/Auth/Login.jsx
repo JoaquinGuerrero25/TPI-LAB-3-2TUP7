@@ -6,9 +6,13 @@ import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 import backImgae from '../../assets/cool-background.svg'
+import { useDispatch } from "react-redux";
+import authslice from "../../redux/slice/authslice";
+import { useAuth } from '../Context/AuthContext'
 
 const Login = () => {
   const navigate = useNavigate();
+  const {login}=useAuth(); 
   const [errorMessage, setErrorMessage] = useState(null);
   const [showMessage, setShowMessage] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -24,12 +28,11 @@ const Login = () => {
     setErrorMessage(null);
     e.preventDefault();
     try {
-      const response = await axios.post('/Authentication/AuthenticateUser', formData);
+      await login(formData)
       navigate("/");
     }
     catch (error) {
       setShowMessage(true);
-      // setErrorMessage(error?.response?.data);
     }
   }
 

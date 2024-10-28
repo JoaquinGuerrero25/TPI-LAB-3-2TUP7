@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import TableGeneric from '../components/Generic/TableGeneric';
 import { headerAppointment } from '../utils/appointment';
 import axios from 'axios';
